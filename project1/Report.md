@@ -23,7 +23,7 @@ In this project, I applied the Double DQN incoporating with Experience Repalay t
 ### 1. DQNetwork
 
 The DQNetwork is implemented in Pytorch. This network containts 04 fully connected layers (each layer have 64 units) and Relu activation function.
-The hyperparameters are choosen from many attempts of training sessions on the CPU. These hyperparameters are given as follows:
+The hyperparameters are choosen from many attempts "trail and error" based on training sessions on the CPU. These hyperparameters are given as follows:
 
 * lr = 0.0001           ( learning rate) 
 * epsilon = 1.0, 
