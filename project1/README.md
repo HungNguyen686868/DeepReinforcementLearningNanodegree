@@ -25,7 +25,7 @@ This project should be run with these following libraries:
 - matplotlib
 - torch >= 0.4.0
 
-This project environment is similar to, but not identical to the Banana Collector environment on the Unity ML-Agents GitHub page. So, my code might not work in this enviroment. If you want to reproduce my results, please consider using the environment provided by Udacity [here](https://github.com/udacity/Value-based-methods#dependencies).
+This project environment is similar to, but not identical to the Banana Collector environment on the Unity ML-Agents GitHub page. So, my code might not work in this enviroment. If you want to reproduce my results, please consider using the Unity environment provided by Udacity [here](https://github.com/udacity/Value-based-methods#dependencies).
 
 ## File Descriptions
 This repository contains:
