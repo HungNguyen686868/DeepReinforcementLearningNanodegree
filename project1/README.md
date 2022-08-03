@@ -1,13 +1,10 @@
-# DeepReinforcementLearningNanodegree
+# Bananas-Project
 
 ## Table of Contents
 
- * [Project Overview](#project-overview)
  * [Problem_statement](#problem-statement)
  * [Requirements](#requirements)
  * [File Descriptions](#file-descriptions)
- * [Dataset](#dataset)
- * [Medium Blog Post](#medium-blog-post)
  * [Acknowledgements](#acknowledgements)
 
 ## Problem statement
@@ -24,8 +21,18 @@ The state space has 37 dimensions and contains the agent's velocity, along with 
 
 ## Requirements
 This project should be run with these following libraries:
-- numPy
+- numpy
+- matplotlib
+- torch >= 0.4.0
 
 This project environment is similar to, but not identical to the Banana Collector environment on the Unity ML-Agents GitHub page. So, my code might not work in this enviroment. If you want to reproduce my results, please consider using the environment provided by Udacity [here](https://github.com/udacity/Value-based-methods#dependencies).
 
 ## File Descriptions
+This repository contains:
+- A notebook that explain all codes in my project
+- Report file that give details about my approach
+
+## Acknowledgements
+- Thanks Udacity for great project 
+- [DQN paper](https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf)
+
