@@ -1,4 +1,4 @@
-# Banana Project
+# Banana Project Report
 
 ## Introduction
 
@@ -33,7 +33,10 @@ The hyperparameters are choosen from many attempts of training sessions on the C
 * batch_size = 32,      (batch size)
 * update = 4,           (frequence to update the network)
 * tau = 0.01            (for soft update the target network's paramaters)
+### 2. Replay Buffer 
+I create a ReplayBuffer that stores the last buffer_size S.A.R.S. (State, Action, Reward, New State) experiences.  During training, the agent will be trained on  #batch_size experiences (randomly sampling from the replay buffer). The agen will accumulate experiences through the replay-buffer until it (the buffer) has at least #batch_size experiences. 
 
+Using replay memory allows to break the correlation between consecutive samples and help to improve the performance of the model
 ## Results
 The agent is trained over 1000 episodes and acheived a high score. It is able to get an average score of +13 over 100 consecutive episodes.
 The training log can be found as beblow:
