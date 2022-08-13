@@ -21,12 +21,13 @@ This project should be run with these following libraries:
 - torch >= 0.4.0
 - python >= 3.6
 
-This project environment is already built thank to Udacity, and you can download it from one of the links below. If you want to reproduce my results, please consider using the Udacity environment provided by Udacity [here](https://github.com/udacity/deep-reinforcement-learning/tree/master/p2_continuous-control).
+This project environment is already built thank to Udacity, and you can download it from one of the links below. If you want to reproduce my results, please consider using the Udacity environment provided by Udacity [here](https://github.com/udacity/deep-reinforcement-learning/tree/master/p2_continuous-control). Then, you can train a agent by running a notebook file.
 
 ## File Descriptions
 This repository contains:
 - A notebook that explain all codes in my project
 - Report file that give details about my approach
+
 
 ## Acknowledgements
 - Thanks Udacity for great project [here](https://github.com/udacity/deep-reinforcement-learning/tree/master/ddpg-pendulum)
