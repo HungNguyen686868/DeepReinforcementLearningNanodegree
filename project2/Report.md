@@ -12,7 +12,7 @@ I choose to solve the First Version that contains a single agent. The task is ep
 In this project, I applied the DDPG algorithm to train an agent. The details about DDPG are given as follows:
 * DDPG, or Deep Deterministic Policy Gradient, is an actor-critic, model-free algorithm based on the deterministic policy gradient that can operate over continuous action spaces. It combines the actor-critic approach with insights from DQNs: in particular, the insights that 1) the network is trained off-policy with samples from a replay buffer to minimize correlations between samples, and 2) the network is trained with a target Q network to give consistent targets during temporal difference backups
 
-I adapt the code from the exercise ddpg-pendulum [here](https://github.com/udacity/deep-reinforcement-learning/tree/master/ddpg-pendulum) and ShangtongZhang's github repo [here](https://github.com/ShangtongZhang/reinforcement-learning-an-introduction) to this project by making as few modifications as possible.
+I adapt the code from the Udacity's example [ddpg-pendulum](https://github.com/udacity/deep-reinforcement-learning/tree/master/ddpg-pendulum) and [ShangtongZhang's github repo](https://github.com/ShangtongZhang/reinforcement-learning-an-introduction) to this project by making as few modifications as possible.
 
 - Using Elu activation instead of Relu activation
 - Using bigger Actor-Critic networks
@@ -22,7 +22,7 @@ I adapt the code from the exercise ddpg-pendulum [here](https://github.com/udaci
 
 The Actor and CriticsNetworks are implemented in Pytorch. The Actor network containts 03 fully connected layers (512- 512 -4 units), 02 BatchNorm layers and Elu activation function. 
 
-```
+```python
 class ActorNetwork(nn.Module):
     """Actor (Policy) Model."""
 
@@ -47,7 +47,8 @@ class ActorNetwork(nn.Module):
 ```
 
 The Critic network containts 04 fully connected layers (with 512-1024-512-1 units) and Elu activation function.
-```
+
+```python
 class CriticNetwork(nn.Module):
     """Build a critic (value) network that maps (state, action) pairs -> Q-values."""
 
@@ -74,7 +75,7 @@ class CriticNetwork(nn.Module):
 
 The hyperparameters are choosen from many attempts "trail and error" based on training sessions on the CPU. These hyperparameters are given as follows:
 
-```
+```python
 config = {"buffer_size": 1000000,  # replay buffer size
           "batch_size" : 128,        # minibatch size
           "gamma" : 0.99,            # discount factor
@@ -98,6 +99,6 @@ if $|| g|| > v$ then  $g = gv/|| g||$    where  $v$ is a norm threshold.
 In pytorch, I use ```python torch.nn.utils.clip_grad_norm_()```, Clips gradient norm of an iterable of parameters. The norm is computed over all gradients together, as if they were concatenated into a single vector. Gradients are modified in-place.
 
 ## Results
-The agent is trained over 1000 episodes and acheived a high score. After 200 iterations of training, the agent is able to get an average score of +35 rewards over 100 consecutive episodes. The training log can be found as beblow:
+The agent is trained over 1000 episodes and acheived a high score. After 200 epiodes of training, the agent is able to get an average score of +35 rewards over 100 consecutive episodes. The training log can be found as beblow:
 
 
