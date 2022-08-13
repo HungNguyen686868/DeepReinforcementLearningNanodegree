@@ -96,6 +96,40 @@ if $\lVert g\lVert > v$ then  $g \leftarrow \frac{gv}{\lVert g\lVert}$    where 
 In pytorch, I use ```python torch.nn.utils.clip_grad_norm_()```, Clips gradient norm of an iterable of parameters. The norm is computed over all gradients together, as if they were concatenated into a single vector. Gradients are modified in-place.
 
 ## Results
-The agent is trained over 1000 episodes and acheived a high score. After 200 epiodes of training, the agent is able to get an average score of +35 rewards over 100 consecutive episodes. The training log can be found as beblow:
+The agent is trained over 1000 episodes and acheived a high score. After 170 epiodes of training, the agent is able to get an average score of +35 rewards over 100 consecutive episodes. The training log can be found as beblow:
 
+![fig](./fig.png "learning Curving")
+
+```
+Episode 10	Average Score: 1.41	 score_actual: 0.50
+Episode 20	Average Score: 0.85	 score_actual: 1.25
+Episode 30	Average Score: 1.11	 score_actual: 2.37
+Episode 40	Average Score: 1.48	 score_actual: 1.27
+Episode 50	Average Score: 1.97	 score_actual: 4.20
+Episode 60	Average Score: 3.11	 score_actual: 14.15
+Episode 70	Average Score: 4.92	 score_actual: 24.97
+Episode 80	Average Score: 7.65	 score_actual: 21.64
+Episode 90	Average Score: 10.78	 score_actual: 39.05
+Episode 100	Average Score: 12.63	 score_actual: 39.40
+Episode 110	Average Score: 16.02	 score_actual: 31.64
+Episode 120	Average Score: 19.71	 score_actual: 39.06
+Episode 130	Average Score: 23.39	 score_actual: 35.24
+Episode 140	Average Score: 26.86	 score_actual: 38.00
+Episode 150	Average Score: 30.16	 score_actual: 36.17
+Episode 160	Average Score: 33.16	 score_actual: 39.10
+Episode 170	Average Score: 35.29	 score_actual: 38.56
+Episode 180	Average Score: 36.04	 score_actual: 33.44
+Episode 190	Average Score: 36.13	 score_actual: 39.07
+Episode 200	Average Score: 36.70	 score_actual: 37.85
+Episode 210	Average Score: 36.50	 score_actual: 37.69
+Episode 220	Average Score: 36.18	 score_actual: 34.67
+Episode 230	Average Score: 35.58	 score_actual: 33.94
+Episode 240	Average Score: 35.62	 score_actual: 39.07
+Episode 250	Average Score: 35.42	 score_actual: 26.12
+Episode 260	Average Score: 34.87	 score_actual: 34.50
+Episode 270	Average Score: 34.70	 score_actual: 39.03
+Episode 280	Average Score: 34.89	 score_actual: 39.09
+Episode 290	Average Score: 34.66	 score_actual: 37.22
+Episode 300	Average Score: 34.66	 score_actual: 39.49
+```
 
