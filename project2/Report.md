@@ -73,7 +73,7 @@ class CriticNetwork(nn.Module):
         self.fc4 =  nn.Linear(fc2_dims , 1)
 ```
 
-The hyperparameters are choosen from many attempts "trail and error" based on training sessions on the CPU. These hyperparameters are given as follows:
+The hyperparameters are choosen from many attempts "trail and error" based on training sessions on the workplace's GPU provided by Udacity. These hyperparameters are given as follows:
 
 ```python
 config = {"buffer_size": 1000000,  # replay buffer size
