@@ -35,7 +35,7 @@ class ActorNetwork(nn.Module):
             seed (int): Random seed
             fc1_dims (int): Number of nodes in first hidden layer
             fc2_dims (int): Number of nodes in second hidden layer            
-            lr (float): learning rate
+
         """
         super(ActorNetwork, self).__init__()
         self.seed = torch.manual_seed(seed)
@@ -61,9 +61,6 @@ class CriticNetwork(nn.Module):
             seed (int): Random seed
             fc1_dims (int): Number of nodes in first hidden layer
             fc2_dims (int): Number of nodes in second hidden layer
-            fc3_dims (int): Number of nodes in 3rd hidden layer
-            fc4_dims (int): Number of nodes in 4th hidden layer
-            lr (float): learning rate
         """
         super(CriticNetwork, self).__init__()
         self.seed = torch.manual_seed(seed)
