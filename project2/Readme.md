@@ -27,7 +27,7 @@ This project environment is already built thank to Udacity, and you can download
 This repository contains:
 - A notebook that explain all codes in my project
 - Report file that give details about my approach
-
+- Model checkpoint
 
 ## Acknowledgements
 - Thanks Udacity for great project [here](https://github.com/udacity/deep-reinforcement-learning/tree/master/ddpg-pendulum)
