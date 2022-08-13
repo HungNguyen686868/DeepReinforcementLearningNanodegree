@@ -94,7 +94,7 @@ Using replay memory allows to break the correlation between consecutive samples 
 
 ### 3. Gradient clipping
 In this project, I apply Gradient Clipping to train Actor-Critic Network. Actually, Gradient Clipping clips the size of the gradients to ensure optimization performs more reasonably near sharp areas of the loss surface. It can be performed in a number of ways. One option is to simply clip the parameter gradient element-wise before a parameter update. Another option is to clip the norm ||g || of the gradient  before a parameter update:
-if $|| g|| > v$ then  $g = gv/|| g||$    where  $v$ is a norm threshold.
+if $\lVert g\lVert > v$ then  $g \leftarrow \frac{gv}{\lVert g\lVert}$    where  $v$ is a norm threshold.
 
 In pytorch, I use ```python torch.nn.utils.clip_grad_norm_()```, Clips gradient norm of an iterable of parameters. The norm is computed over all gradients together, as if they were concatenated into a single vector. Gradients are modified in-place.
 
