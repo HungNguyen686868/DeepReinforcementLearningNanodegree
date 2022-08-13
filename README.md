@@ -12,5 +12,5 @@ In this project, I trained an agent to navigate and collect bananas (yellow and 
 
 In this project, I trained an agent to maintain its position at the target location for as many time steps as possible. In this environment, a double-jointed arm can move to target locations. A reward of +0.1 is provided for each step that the agent's hand is in the goal location. Thus, the goal of your agent is to maintain its position at the target location for as many time steps as possible.
 
-- [Link to notebook](https://github.com/nguyenduchuyvn/DeepReinforcementLearningNanodegree/tree/main/project2)
+- [Link to notebook](https://github.com/nguyenduchuyvn/DeepReinforcementLearningNanodegree/blob/main/project2/Continuous_Control.ipynb)
 
