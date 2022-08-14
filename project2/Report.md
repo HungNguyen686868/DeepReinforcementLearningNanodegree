@@ -96,9 +96,9 @@ if $\lVert g\lVert > v$ then  $g \leftarrow \frac{gv}{\lVert g\lVert}$    where 
 In pytorch, I use ```python torch.nn.utils.clip_grad_norm_()```, Clips gradient norm of an iterable of parameters. The norm is computed over all gradients together, as if they were concatenated into a single vector. Gradients are modified in-place.
 
 ## Results
-The agent is trained over 1000 episodes and acheived a high score. After 170 epiodes of training, the agent is able to get an average score of +35 rewards over 100 consecutive episodes. The training log can be found as beblow:
+The agent is trained over 1000 episodes and acheived a high score. After 170 epiodes of training, the agent is able to get an average score of +35 rewards over 100 consecutive episodes. The learning curve and the training log can be found as beblow:
 
-![fig](./fig.png "learning Curving")
+![fig](./fig.png "learning Curve")
 
 ```
 Episode 10	Average Score: 1.41	 score_actual: 0.50
