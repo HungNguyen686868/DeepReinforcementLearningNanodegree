@@ -99,7 +99,7 @@ In pytorch, I use ```python torch.nn.utils.clip_grad_norm_()```, Clips gradient 
 
 ### 4. Elu activation
 
-ELU has many advantages in comparison with RELU. It doesn’t have the dying ReLU problem. The function tends to converge cost to zero faster and produces more accurate results. ELu can be considered as a merger between good features of ReLU & Leaky ReLU.
+ELU has many advantages in comparison with RELU. It has nonlinearity and linearity at the same time. In addition, it doesn’t have the “dying ReLU” problem. The drawback is that it’s slightly slower to train. The function tends to converge cost to zero faster and produces more accurate results. ELu can be considered as a merger between good features of ReLU & Leaky ReLU.
 
 In this project, I found that using Elu activation help the Actor-Critic network to converge quicker and stabler than using Relu activation.
 
