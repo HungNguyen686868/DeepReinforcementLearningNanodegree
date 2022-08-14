@@ -90,7 +90,9 @@ I create a ReplayBuffer that stores the last buffer_size S.A.R.S. (State, Action
 Using replay memory allows to break the correlation between consecutive samples and help to improve the performance of the model. If the network learned only from consecutive samples of experience as they occurred sequentially in the environment, the samples would be highly correlated and would therefore lead to inefficient learning. Taking random samples from replay memory breaks this correlation.
 
 ### 3. Gradient clipping
-In this project, I apply [Gradient Clipping](https://paperswithcode.com/method/gradient-clipping) to train Actor-Critic Network. Actually, Gradient Clipping clips the size of the gradients to ensure optimization performs more reasonably near sharp areas of the loss surface. It can be performed in a number of ways. One option is to simply clip the parameter gradient element-wise before a parameter update. Another option is to clip the norm ||g || of the gradient  before a parameter update:
+In this project, I apply [Gradient Clipping](https://paperswithcode.com/method/gradient-clipping) to train Actor-Critic Network. I found that using gradient clipping helps Actor-Critic network to converge quicker and stabler.
+
+Actually, Gradient Clipping clips the size of the gradients to ensure optimization performs more reasonably near sharp areas of the loss surface. It can be performed in a number of ways. One option is to simply clip the parameter gradient element-wise before a parameter update. Another option is to clip the norm ||g || of the gradient  before a parameter update:
 if $\lVert g\lVert > v$ then  $g \leftarrow \frac{gv}{\lVert g\lVert}$    where  $v$ is a norm threshold.
 
 In pytorch, I use ```python torch.nn.utils.clip_grad_norm_()```, Clips gradient norm of an iterable of parameters. The norm is computed over all gradients together, as if they were concatenated into a single vector. Gradients are modified in-place.
