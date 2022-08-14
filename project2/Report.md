@@ -97,6 +97,12 @@ if $\lVert g\lVert > v$ then  $g \leftarrow \frac{gv}{\lVert g\lVert}$    where 
 
 In pytorch, I use ```python torch.nn.utils.clip_grad_norm_()```, Clips gradient norm of an iterable of parameters. The norm is computed over all gradients together, as if they were concatenated into a single vector. Gradients are modified in-place.
 
+### 4. Elu activation
+
+ELU has many advantages in comparison with RELU. It doesn’t have the dying ReLU problem. The function tends to converge cost to zero faster and produces more accurate results. ELu can be considered as a merger between good features of ReLU & Leaky ReLU.
+
+In this project, I found that using Elu activation help the Actor-Critic network to converge quicker and stabler than using Relu activation.
+
 ## Results
 The agent is trained over 1000 episodes and acheived a high score. After 170 epiodes of training, the agent is able to get an average score of +35 rewards over 100 consecutive episodes. The learning curve and the training log can be found as beblow:
 
