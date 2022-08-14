@@ -104,7 +104,7 @@ ELU has many advantages in comparison with RELU. It has nonlinearity and lineari
 In this project, I found that using Elu activation help the Actor-Critic network to converge quicker and stabler than using Relu activation.
 
 ## Results
-The agent is trained over 1000 episodes and acheived a high score. After 170 epiodes of training, the agent is able to get an average score of +35 rewards over 100 consecutive episodes. The learning curve and the training log can be found as beblow:
+The agent is trained over 300 episodes and acheived a high score. After 170 epiodes of training, the agent is able to get an average score of +35 rewards over 100 consecutive episodes. The learning curve and the training log can be found as beblow:
 
 ![fig](./fig.png "learning Curve")
 
