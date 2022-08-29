@@ -1,4 +1,4 @@
-# Continous Control-Project
+# Play Tennis Project
 
 ## Table of Contents
 
