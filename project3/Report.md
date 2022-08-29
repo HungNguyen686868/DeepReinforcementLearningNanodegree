@@ -1,4 +1,4 @@
-# Continous Control Project Report
+# Play Tennis Project Report
 
 ## Introduction
 
@@ -14,7 +14,6 @@ The task is episodic, and in order to solve the environment, your agents must ge
 The environment is considered solved, when the average (over 100 episodes) of those scores is at least +0.5.
 
 
-
 ## Solutions
 In this project, I applied Twin Delayed Deep Deterministic (short for TD3; Fujimoto et al., 2018) to train an agent. Twin Delayed Deep Deterministic (short for TD3; Fujimoto et al., 2018) applied a couple of tricks on DDPG to prevent the overestimation of the value function:
 
@@ -23,8 +22,6 @@ In this project, I applied Twin Delayed Deep Deterministic (short for TD3; Fujim
 * Delayed update of Target and Policy Networks: In the actor-critic model, policy and value updates are deeply coupled: Value estimates diverge through overestimation when the policy is poor, and the policy will become poor if the value estimate itself is inaccurate. To reduce the variance, TD3 updates the policy at a lower frequency than the Q-function. The policy network stays the same until the value error is small enough after several updates. The idea is similar to how the periodically-updated target network stay as a stable objective in DQN.
 
 * Target Policy Smoothing: Given a concern with deterministic policies that they can overfit to narrow peaks in the value function, TD3 introduced a smoothing regularization strategy on the value function: adding a small amount of clipped random noises to the selected action and averaging over mini-batches.
-
-
 
 Since there are 02 agents in this environment, I reshaped the dimension of action and state before feeding them into the actor/critic networks and environment in the training loops.
 
@@ -55,7 +52,7 @@ for t in range(max_t):
 
 I adapt the code from [ShangtongZhang's github repo](https://github.com/ShangtongZhang/reinforcement-learning-an-introduction) and [Phil Tabor's github repo](https://github.com/philtabor/Actor-Critic-Methods-Paper-To-Code)to this project by making as few modifications as possible (see below)
 
-![fig1](./TD3.png "TD3")
+![fig1](./TD3.PNG "TD3")
 
 ## Actor-Critic networks
 
